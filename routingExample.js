@@ -3,6 +3,10 @@ var app = express();
 
 app.use(express.static('helloWorld'));
 
+app.post('/ip', function(req, res) {
+    res.send('the ip address is - ' + req.ip);
+});
+
 app.get('/', function (req, res) {
    res.send('This is the FIRST route!');
 })
@@ -15,5 +19,8 @@ app.get('/route2', function (req, res) {
 app.get('/route3', function (req, res) {
    res.send('This is the THIRD route!');
 })
+
+
+
 
 var server = app.listen(8081, function () {})
