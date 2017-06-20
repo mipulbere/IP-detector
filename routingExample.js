@@ -3,7 +3,7 @@ var app = express();
 
 app.use(express.static('helloWorld'));
 
-app.post('/ip', function(req, res) {
+app.get('/ip', function(req, res) {
     res.send('the ip address is - ' + req.ip);
 });
 
