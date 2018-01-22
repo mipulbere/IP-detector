@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="project.css">
+<link rel="stylesheet" type="text/css" href="styling.css">
 <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
 
-
-
 <html>
-<head>
-<title>IP Detector</title>
-</head>
+  <head>
+  <title>IP Detector</title>
+  <script src="eventHandler.js"></script>
+  </head>
 
-<body>
+  <body>
 
-<h1 class = "title">IP Detector</h1>
-<h3 class = "subTitle">CLICK THE BUTTON</h3>
-
-<script>
-function loadDoc(id) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        id.innerHTML = xhttp.responseText;
-      }
-    };
-    xhttp.open("GET",'http://localhost:3000/ip', true);
-    xhttp.send();
-  }</script>
-<div id = "picture" onclick="loadDoc(this)">
-  <img class = "redButton" src = "http://www.garethjhill.com/wp-content/uploads/2015/01/bigredbutton.jpg">
-</div>
-
-<h1 id="exercise"></h1>
-
-
-
-</body>
+    <h1 class = "title">IP Detector</h1>
+    <h3 class = "subTitle">CLICK THE BUTTON</h3>
+    <div id = "picture" onclick="loadDoc()">
+      <img class = "redButton" src = "http://www.garethjhill.com/wp-content/uploads/2015/01/bigredbutton.jpg">
+    </div>
+  </body>
 </html>
